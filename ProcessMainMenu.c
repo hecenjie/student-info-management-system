@@ -9,10 +9,12 @@
 
 void ProcessMainMenu(char key)
 {
+    int i;
+
     switch(key)
     {
     case '1'://学生信息录入
-        printf("测试1");
+        ShowInfoInput();
         break;
     case '2'://学生成绩查询
         printf("测试2");
@@ -32,5 +34,11 @@ void ProcessMainMenu(char key)
     case '7'://退出系统
         system("cls");
         exit(0);
+    }
+
+    for(i = 0; i < 17; i++)  //执行完一个函数后对整个信息界面清屏
+    {
+        SetPosition(MARGIN_X + 1, 3 + i);
+        printf("                                                                                ");
     }
 }
