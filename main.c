@@ -13,8 +13,7 @@ char key;  //用户在菜单的选择
 
 int main()
 {
-
-    ReadInfo();
+    ReadInfo();  //将文件已有学生信息录入数组当中
     //system("mode con cols=500 lines=500");
     SetTitle("学生信息管理系统");
     //system("color 8E");  //改变背景色
@@ -33,4 +32,6 @@ int main()
         }
         ShowMainMenu();
     }
+
+    system("pause");
 }

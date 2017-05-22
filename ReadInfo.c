@@ -1,8 +1,9 @@
 #include "ReadInfo.h"
 
 /*********************************************
- * 文件名：ReadInfo.c
- * 描  述：用来定义系统对文件的读取、写入
+ * 文件名：ReadInfo.h
+ * 描  述：用来定义系统对文件的读取、写入，并定义了学生信息结构体StuInfo，数组student长度为N（即50），
+ * 以及记录学生有效数量的全局变量count。
  * 创建人：CANJIE
  * 日  期：2017-5-17
  *
@@ -26,7 +27,7 @@ void ReadInfo()
     count = 0;
     StuInfo *p = student;  //之后可对p操作，p地址移动后通过student恢复即可
 
-    if((fp = fopen("student_info.txt", "r")) == NULL)  //如果打开文件失败
+    if((fp = fopen("student_info.dat", "r")) == NULL)  //如果打开文件失败
     {
         printf("打开文件失败，请按任意键退出！");
         getch();
@@ -42,6 +43,7 @@ void ReadInfo()
             break;        //跳出循环，停止录入
     }
     p = student;  //将p恢复
+    fclose(fp);  //关闭文件
 
     /*以下代码用于测试文件信息录入是否成功
     for(i = 0; i < count; i++, p++)
@@ -57,7 +59,7 @@ void WriteInfo()
     int i;
     StuInfo *p = student;
 
-    if((fp = fopen("student_info.txt", "w+")) == NULL)  //如果打开文件失败
+    if((fp = fopen("student_info.dat", "w+")) == NULL)  //如果打开文件失败
     {
         printf("打开文件失败，请按任意键退出！");
         getch();
@@ -68,6 +70,8 @@ void WriteInfo()
     {
         fprintf(fp, "%s %s %s %d %d %d %d\n", p->prof, p->name, p->sex, p->clas, p->num, p->math_score, p->Eng_score);
     }
+
+    fclose(fp);  //关闭文件
 }
 
 

@@ -9,6 +9,7 @@
  *********************************************/
 #include <stdio.h>
 #include <stdlib.h>
+#include "GameLib.h"
 
 void ProcessMainMenu(char key);
 
