@@ -34,19 +34,6 @@ void SetPosition(int x, int y)
     //设置光标的坐标
     SetConsoleCursorPosition(winHandle, pos);
 }
-/* 从x,y坐标开始，清rowCount行 */
-void Clear(int x, int y, int rowCount)
-{
-    int i, j;
-    for(i = 0; i < rowCount; i++)
-    {
-        SetPosition(x, y + i);
-        for(j = 0; j < 81; j++)
-        {
-            printf(" ");
-        }
-    }
-}
 
 /************************************************************************************************/
 

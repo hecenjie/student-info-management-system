@@ -21,7 +21,7 @@ typedef struct _stuinfo{
     char name[50];  //姓名
     char sex[10];   //性别
     int clas;       //班级
-    int num;        //学号
+    long int num;        //学号
     int math_score; //数学成绩
     int Eng_score;  //英语成绩
 }StuInfo;

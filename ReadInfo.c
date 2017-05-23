@@ -36,7 +36,7 @@ void ReadInfo()
 
     for(i = 0; i < N; i++, p++)
     {
-        fscanf(fp, "%s %s %s %d %d %d %d", p->prof, p->name, p->sex, &(p->clas), &(p->num), &(p->math_score), &(p->Eng_score));
+        fscanf(fp, "%s %s %s %d %ld %d %d", p->prof, p->name, p->sex, &(p->clas), &(p->num), &(p->math_score), &(p->Eng_score));
         if(p->clas != 0)  //如果班级号码不为0
             count++;      //学生有效数量+1
         else
@@ -68,7 +68,7 @@ void WriteInfo()
 
     for(i = 0; i < count; i++, p++)
     {
-        fprintf(fp, "%s %s %s %d %d %d %d\n", p->prof, p->name, p->sex, p->clas, p->num, p->math_score, p->Eng_score);
+        fprintf(fp, "%s %s %s %d %ld %d %d\n", p->prof, p->name, p->sex, p->clas, p->num, p->math_score, p->Eng_score);
     }
 
     fclose(fp);  //关闭文件

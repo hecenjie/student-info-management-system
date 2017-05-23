@@ -24,7 +24,6 @@ void ShowInfoInput()
     }
     while(1)
     {
-        printf("%d", count);
         for(i = 0; i < 13; i++)
         {
             SetPosition(MARGIN_X + 19, 4 + i);
@@ -61,7 +60,7 @@ void InfoInput()
     SetPosition(MARGIN_X + 35, 11);
     scanf("%d", &(p->clas));               //班级输入
     SetPosition(MARGIN_X + 35, 12);
-    scanf("%d", &(p->num));                //学号输入
+    scanf("%ld", &(p->num));                //学号输入
     SetPosition(MARGIN_X + 37, 13);
     scanf("%d", &(p->math_score));         //数学成绩输入
     SetPosition(MARGIN_X + 37, 14);
@@ -94,7 +93,7 @@ void InfoDel()
 
     SetPosition(MARGIN_X + 38, 11);
     fflush(stdin);
-    scanf("%d", &num);  //学号的输入
+    scanf("%ld", &num);  //学号的输入
     fflush(stdin);  //输入后清空缓存，防止回车键录入字符串
     SetPosition(MARGIN_X + 38, 12);
     MyFgets(name, 50);    //姓名的输入
