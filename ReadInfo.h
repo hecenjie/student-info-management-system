@@ -14,7 +14,7 @@
 #include <stdlib.h>
 #include <conio.h>
 #include "GameLib.h"
-#define N 50  //学生有50个
+#define N 100  //学生有50个
 
 typedef struct _stuinfo{
     char prof[50];  //专业

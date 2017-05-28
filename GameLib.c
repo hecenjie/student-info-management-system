@@ -86,6 +86,30 @@ void ShowMainMenu()
     printf("7、退出系统");
 }
 
+/* 完整清屏 */
+void ClearTotal()
+{
+    int i, j;  //竖排有17，横排有81
+    for(i = 0; i < 17; i++)
+    {
+        for(j = 0; j < 81; j++)
+        {
+            SetPosition(MARGIN_X + j + 1, 3 + i);
+            printf(" ");
+        }
+    }
+}
+
+/* 部分清屏 */
+void ClearPart()
+{
+    int i;
+    for(i = 0; i < 13; i++)
+    {
+        SetPosition(MARGIN_X + 19, 4 + i);
+        printf("                                                    ");
+    }
+}
 
 
 

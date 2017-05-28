@@ -26,5 +26,9 @@ void ShowWelcome();
 void ShowInfomation();
 /* 显示用户菜单 */
 void ShowMainMenu();
+/* 完整清屏 */
+void ClearTotal();
+/* 部分清屏 */
+void ClearPart();
 
 #endif // GAMELIB_H_INCLUDED

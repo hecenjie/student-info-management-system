@@ -23,7 +23,7 @@ void ProcessMainMenu(char key)
         printf("测试3");
         break;
     case '4'://排名查询
-        printf("测试4");
+        RankingShowOne();
         break;
     case '5'://* 智能人机对话
         printf("测试5");
