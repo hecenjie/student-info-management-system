@@ -53,7 +53,7 @@ void ProcessRankingQuery(char choice)
     }
 }
 
-/* 总成绩排行榜 */
+/* 总成绩排行榜的实现 */
 void RankingTotal()
 {
     int i, j;
@@ -170,9 +170,14 @@ void RankingTotal()
             break;
         }
     }
+    for(i = 0; i < 2; i++)
+    {
+        SetPosition(MARGIN_X + 64, 21 + i);
+        printf("                  ");
+    }
 }
 
-/* 分割线、科目名称等的界面元素 */
+/* 分割线、科目名称等的界面元素显示 */
 void RankingShowTwo()
 {
     int i;
@@ -188,7 +193,7 @@ void RankingShowTwo()
     printf("排名   姓名\t英语  数学  总成绩");
 }
 
-/* 数学排名、英语排名选项 */
+/* 选择英语排行、数学排行界面 */
 void RankingPart()
 {
     char choice;
@@ -233,7 +238,7 @@ void ProcessRankingPart(char choice)
     }
 }
 
-/* 数学成绩排行榜 */
+/* 数学成绩排行榜的实现 */
 void RankingMath()
 {
     int i, j;
@@ -350,9 +355,14 @@ void RankingMath()
             break;
         }
     }
+    for(i = 0; i < 2; i++)
+    {
+        SetPosition(MARGIN_X + 64, 21 + i);
+        printf("                  ");
+    }
 }
 
-/* 英语成绩排行榜 */
+/* 英语成绩排行榜的实现 */
 void RankingEng()
 {
     int i, j;
@@ -468,6 +478,11 @@ void RankingEng()
             ClearTotal();
             break;
         }
+    }
+    for(i = 0; i < 2; i++)
+    {
+        SetPosition(MARGIN_X + 64, 21 + i);
+        printf("                  ");
     }
 }
 
