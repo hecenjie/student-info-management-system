@@ -1,8 +1,6 @@
 #ifndef SHOWPOINTS_H_INCLUDED
 #define SHOWPOINTS_H_INCLUDED
 
-
-
 #endif // SHOWPOINTS_H_INCLUDED
 #include <stdio.h>
 #include <stdlib.h>

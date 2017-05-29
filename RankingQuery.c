@@ -104,7 +104,7 @@ void RankingTotal()
                         j = 1;
                     SetPosition(MARGIN_X + 45, 4 + j);  //后半部分
                 }
-                printf(" %-6d%s%8d%6d%7d\n", rank++, p->name, p->Eng_score, p->math_score, (p->Eng_score) + (p->math_score));
+                printf(" %-6d%s\t%-3d   %-d%7d\n", rank++, p->name, p->Eng_score, p->math_score, (p->Eng_score) + (p->math_score));
             }
             p = student + (page-1) * 28;  //置回指针p的指向
         }
@@ -122,7 +122,7 @@ void RankingTotal()
                         j = 1;
                     SetPosition(MARGIN_X + 45, 4 + j);
                 }
-                printf(" %-6d%s%8d%6d%7d\n", rank++, p->name, p->Eng_score, p->math_score, (p->Eng_score) + (p->math_score));
+                printf(" %-6d%s\t%-3d   %-d%7d\n", rank++, p->name, p->Eng_score, p->math_score, (p->Eng_score) + (p->math_score));
             }
             for( ; i < 28; i++, j++)  //将前一页留下的垃圾信息清除
             {
@@ -272,9 +272,9 @@ void RankingMath()
     }
     p = student;  //将p指回数组起始
 
-    RankingShowTwo();  //显示分割线、科目名称等的界面元素
     while(1)
     {
+        RankingShowTwo();  //显示分割线、科目名称等的界面元素
         rank = 1 + (page-1) * 28;  //设置每一页的起始排名
         if(page != page_max)  //不为最后一页的情况
         {
@@ -290,7 +290,7 @@ void RankingMath()
                         j = 1;
                     SetPosition(MARGIN_X + 45, 4 + j);  //后半部分
                 }
-                printf(" %-6d%s%8d%6d%7d\n", rank++, p->name, p->Eng_score, p->math_score, (p->Eng_score) + (p->math_score));
+                printf(" %-6d%s\t%-3d   %-d%7d\n", rank++, p->name, p->Eng_score, p->math_score, (p->Eng_score) + (p->math_score));
             }
             p = student + (page-1) * 28;  //置回指针p的指向
         }
@@ -308,7 +308,7 @@ void RankingMath()
                         j = 1;
                     SetPosition(MARGIN_X + 45, 4 + j);
                 }
-                printf(" %-6d%s%8d%6d%7d\n", rank++, p->name, p->Eng_score, p->math_score, (p->Eng_score) + (p->math_score));
+                printf(" %-6d%s\t%-3d   %-d%7d\n", rank++, p->name, p->Eng_score, p->math_score, (p->Eng_score) + (p->math_score));
             }
             for( ; i < 28; i++, j++)  //将前一页留下的垃圾信息清除
             {
@@ -355,6 +355,7 @@ void RankingMath()
             ClearTotal();
             break;
         }
+        ClearTotal();
     }
     for(i = 0; i < 2; i++)
     {
@@ -396,9 +397,9 @@ void RankingEng()
     }
     p = student;  //将p指回数组起始
 
-    RankingShowTwo();  //显示分割线、科目名称等的界面元素
     while(1)
     {
+        RankingShowTwo();  //显示分割线、科目名称等的界面元素
         rank = 1 + (page-1) * 28;  //设置每一页的起始排名
         if(page != page_max)  //不为最后一页的情况
         {
@@ -414,7 +415,7 @@ void RankingEng()
                         j = 1;
                     SetPosition(MARGIN_X + 45, 4 + j);  //后半部分
                 }
-                printf(" %-6d%s%8d%6d%7d\n", rank++, p->name, p->Eng_score, p->math_score, (p->Eng_score) + (p->math_score));
+                printf(" %-6d%s\t%-3d   %-d%7d\n", rank++, p->name, p->Eng_score, p->math_score, (p->Eng_score) + (p->math_score));
             }
             p = student + (page-1) * 28;  //置回指针p的指向
         }
@@ -432,7 +433,7 @@ void RankingEng()
                         j = 1;
                     SetPosition(MARGIN_X + 45, 4 + j);
                 }
-                printf(" %-6d%s%8d%6d%7d\n", rank++, p->name, p->Eng_score, p->math_score, (p->Eng_score) + (p->math_score));
+                printf(" %-6d%s\t%-3d   %-d%7d\n", rank++, p->name, p->Eng_score, p->math_score, (p->Eng_score) + (p->math_score));
             }
             for( ; i < 28; i++, j++)  //将前一页留下的垃圾信息清除
             {
@@ -479,6 +480,7 @@ void RankingEng()
             ClearTotal();
             break;
         }
+        ClearTotal();
     }
     for(i = 0; i < 2; i++)
     {

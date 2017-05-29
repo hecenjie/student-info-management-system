@@ -81,7 +81,7 @@ void ShowMainMenu()
     SetPosition(MARGIN_X, 25);
     printf("5、* 智能人机对话");
     SetPosition(MARGIN_X, 26);
-    printf("6、* 音乐播放");
+    printf("6、音乐播放");
     SetPosition(MARGIN_X, 27);
     printf("7、退出系统");
 }

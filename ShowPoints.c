@@ -3,6 +3,7 @@
 extern StuInfo student[N];
 extern int count;
 
+
 //ΩÁ√Ê
 void IDfind()
 {

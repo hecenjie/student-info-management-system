@@ -5,19 +5,20 @@ void music()
 {
     int i;
     char key;
+	
     for(i = 0; i < 7; i++)
     {
         SetPosition(MARGIN_X, 21 + i);
         printf("                             ");
     }
 
-    PlaySound(TEXT("music\\南农校歌.wav"), NULL, SND_FILENAME | SND_ASYNC | SND_LOOP);
+    PlaySound(TEXT("music\\南农校歌.wav"), NULL, SND_FILENAME | SND_ASYNC | SND_LOOP);  //播放音乐
     Lyrics();
     while(1)
     {
-        if((key = getch()) == 'z')
+        if((key = getch()) == 'z')  //用户按z键暂停播放
         {
-            PlaySound(NULL, NULL, NULL);
+            PlaySound(NULL, NULL, NULL);  //音乐停止
             ClearTotal();
             break;
         }
@@ -39,7 +40,7 @@ void Lyrics()
     printf("你把智慧撒向希望的田野");
     SetPosition(MARGIN_X + 27, 9);
     printf("用科学催动催动 现代化巨轮");
-
+	/*************************************************/
     SetPosition(MARGIN_X + 22, 11);
     printf("钟山挺秀是你的风骨 长江浩然是你的雄魂");
     SetPosition(MARGIN_X + 22, 12);
@@ -52,7 +53,7 @@ void Lyrics()
     printf("在跨世纪里程中迎接挑战");
     SetPosition(MARGIN_X + 27, 16);
     printf("为中华腾飞腾飞 拼搏奋进 奋进");
-
+    /*************************************************/
     SetPosition(MARGIN_X + 30, 18);
     printf("(按z键暂停播放并返回)");
 }
