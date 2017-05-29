@@ -86,9 +86,9 @@ void RankingTotal()
     }
     p = student;  //将p指回数组起始
 
-    RankingShowTwo();  //显示分割线、科目名称等的界面元素
     while(1)
     {
+        RankingShowTwo();  //显示分割线、科目名称等的界面元素
         rank = 1 + (page-1) * 28;  //设置每一页的起始排名
         if(page != page_max)  //不为最后一页的情况
         {
@@ -169,6 +169,7 @@ void RankingTotal()
             ClearTotal();
             break;
         }
+        ClearTotal();
     }
     for(i = 0; i < 2; i++)
     {

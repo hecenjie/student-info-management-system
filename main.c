@@ -7,6 +7,8 @@
 #include "ReadInfo.h"
 #include "InfoInput.h"
 #include "RankingQuery.h"
+#include "ShowPoints.h"
+#include "PlayMusic.h"
 
 extern int count;  //引用外部全局变量，即学生有效数量
 
@@ -17,7 +19,7 @@ int main()
     ReadInfo();  //将文件已有学生信息录入数组当中
     //system("mode con cols=500 lines=500");
     SetTitle("学生信息管理系统");
-    system("color 8E");  //改变背景色
+    //system("color 8E");  //改变背景色
     ShowWelcome();
     ShowInfomation();
     //while(Login() == 0);

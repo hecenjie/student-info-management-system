@@ -17,7 +17,7 @@ void ProcessMainMenu(char key)
         ShowInfoInput();
         break;
     case '2'://学生成绩查询
-        printf("测试2");
+        IDfind();
         break;
     case '3'://打印报表
         printf("测试3");
@@ -29,7 +29,7 @@ void ProcessMainMenu(char key)
         printf("测试5");
         break;
     case '6'://* 音乐播放
-        printf("测试6");
+        music();
         break;
     case '7'://退出系统
         system("cls");
