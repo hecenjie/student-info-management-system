@@ -1,6 +1,13 @@
 #ifndef RANKINGQUERY_H_INCLUDED
 #define RANKINGQUERY_H_INCLUDED
 
+/*********************************************
+ * 文件名：RankingQuery.h
+ * 描  述：实现了学生成绩排行榜的查看（包括总成绩排行榜、单科成绩排行榜）
+ * 创建人：CANJIE
+ * 日  期：2017-5-30
+ *********************************************/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "GameLib.h"

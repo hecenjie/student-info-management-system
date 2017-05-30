@@ -1,3 +1,10 @@
+/*********************************************
+ * 文件名：RankingQuery.c
+ * 描  述：实现了学生成绩排行榜的查看（包括总成绩排行榜、单科成绩排行榜）
+ * 创建人：CANJIE
+ * 日  期：2017-5-30
+ *********************************************/
+
 #include "RankingQuery.h"
 
 extern StuInfo student[N];
@@ -104,7 +111,7 @@ void RankingTotal()
                         j = 1;
                     SetPosition(MARGIN_X + 45, 4 + j);  //后半部分
                 }
-                printf(" %-6d%s\t%-3d   %-d%7d\n", rank++, p->name, p->Eng_score, p->math_score, (p->Eng_score) + (p->math_score));
+                printf("%-6d%-10s%-6d%-7d%-6d", rank++, p->name, p->Eng_score, p->math_score, (p->Eng_score) + (p->math_score));
             }
             p = student + (page-1) * 28;  //置回指针p的指向
         }
@@ -122,7 +129,7 @@ void RankingTotal()
                         j = 1;
                     SetPosition(MARGIN_X + 45, 4 + j);
                 }
-                printf(" %-6d%s\t%-3d   %-d%7d\n", rank++, p->name, p->Eng_score, p->math_score, (p->Eng_score) + (p->math_score));
+                printf("%-6d%-10s%-6d%-7d%-6d", rank++, p->name, p->Eng_score, p->math_score, (p->Eng_score) + (p->math_score));
             }
             for( ; i < 28; i++, j++)  //将前一页留下的垃圾信息清除
             {
@@ -290,7 +297,7 @@ void RankingMath()
                         j = 1;
                     SetPosition(MARGIN_X + 45, 4 + j);  //后半部分
                 }
-                printf(" %-6d%s\t%-3d   %-d%7d\n", rank++, p->name, p->Eng_score, p->math_score, (p->Eng_score) + (p->math_score));
+                printf("%-6d%-10s%-6d%-7d%-6d", rank++, p->name, p->Eng_score, p->math_score, (p->Eng_score) + (p->math_score));
             }
             p = student + (page-1) * 28;  //置回指针p的指向
         }
@@ -308,7 +315,7 @@ void RankingMath()
                         j = 1;
                     SetPosition(MARGIN_X + 45, 4 + j);
                 }
-                printf(" %-6d%s\t%-3d   %-d%7d\n", rank++, p->name, p->Eng_score, p->math_score, (p->Eng_score) + (p->math_score));
+                printf("%-6d%-10s%-6d%-7d%-6d", rank++, p->name, p->Eng_score, p->math_score, (p->Eng_score) + (p->math_score));
             }
             for( ; i < 28; i++, j++)  //将前一页留下的垃圾信息清除
             {
@@ -415,7 +422,7 @@ void RankingEng()
                         j = 1;
                     SetPosition(MARGIN_X + 45, 4 + j);  //后半部分
                 }
-                printf(" %-6d%s\t%-3d   %-d%7d\n", rank++, p->name, p->Eng_score, p->math_score, (p->Eng_score) + (p->math_score));
+                printf("%-6d%-10s%-6d%-7d%-6d", rank++, p->name, p->Eng_score, p->math_score, (p->Eng_score) + (p->math_score));
             }
             p = student + (page-1) * 28;  //置回指针p的指向
         }
@@ -433,7 +440,7 @@ void RankingEng()
                         j = 1;
                     SetPosition(MARGIN_X + 45, 4 + j);
                 }
-                printf(" %-6d%s\t%-3d   %-d%7d\n", rank++, p->name, p->Eng_score, p->math_score, (p->Eng_score) + (p->math_score));
+                printf("%-6d%-10s%-6d%-7d%-6d", rank++, p->name, p->Eng_score, p->math_score, (p->Eng_score) + (p->math_score));
             }
             for( ; i < 28; i++, j++)  //将前一页留下的垃圾信息清除
             {
