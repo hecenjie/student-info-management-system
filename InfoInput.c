@@ -47,6 +47,7 @@ void ShowInfoInput()
 void InfoInput()
 {
     int i;
+    ReadInfo();
     StuInfo *p = student + count;  //指针指向数组末尾，即将新增信息添加到数组最后一个学生信息的后面
     ShowOne();
 
@@ -86,6 +87,7 @@ void InfoInput()
 void InfoDel()
 {
     int i, j, k;
+    ReadInfo();
     ShowTwo();
     StuInfo *p = student;  //指针指向数组中第一名学生的信息
     int num;  //要删除的学号
@@ -131,7 +133,7 @@ void InfoDel()
     }
     else  //找到了
     {
-        SetPosition(MARGIN_X + 38, 11);
+        SetPosition(MARGIN_X + 36, 11);
         printf("恭喜，删除成功！");
         count--;  //学生有效数量-1
         //printf("%d", count);  //测试代码
@@ -162,9 +164,11 @@ void ProcessInfoInput(char choice)
             SetPosition(MARGIN_X + 27, 8 + i);
             printf("                       ");
         }
-        SetPosition(MARGIN_X + 20, 9);
-        printf("对不起，只能输入1~3之间的数字，请您重新输入！");
-        Sleep(1500);
+        SetPosition(MARGIN_X + 25, 9);
+        printf("对不起，只能输入1~3之间的数字！");
+        SetPosition(MARGIN_X + 32, 10);
+        printf("请按任意键返回...");
+        getch();
     }
 }
 

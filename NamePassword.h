@@ -11,7 +11,9 @@
 #include <stdlib.h>
 #include <string.h>
 #include "GameLib.h"
-
+#include "tools.h"
+#include "conio.h"
+#include <ctype.h>
 #define USER_NAME "powerful"
 #define PASSWORD "00000000"
 

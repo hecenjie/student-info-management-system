@@ -79,11 +79,9 @@ void ShowMainMenu()
     SetPosition(MARGIN_X, 24);
     printf("4、排名查询");
     SetPosition(MARGIN_X, 25);
-    printf("5、* 智能人机对话");
+    printf("5、音乐播放");
     SetPosition(MARGIN_X, 26);
-    printf("6、音乐播放");
-    SetPosition(MARGIN_X, 27);
-    printf("7、退出系统");
+    printf("6、退出系统");
 }
 
 /* 完整清屏 */

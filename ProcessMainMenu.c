@@ -20,18 +20,15 @@ void ProcessMainMenu(char key)
         IDfind();
         break;
     case '3'://打印报表
-        printf("测试3");
+        InputSearch();
         break;
     case '4'://排名查询
         RankingShowOne();
         break;
-    case '5'://* 智能人机对话
-        printf("测试5");
-        break;
-    case '6'://* 音乐播放
+    case '5'://* 音乐播放
         music();
         break;
-    case '7'://退出系统
+    case '6'://退出系统
         system("cls");
         exit(0);
     }

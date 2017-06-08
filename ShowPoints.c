@@ -44,7 +44,7 @@ void IDfind0()
         printf("                                                 ");
     }
     SetPosition(MARGIN_X + 26, 9);
-    printf("   请输入学生学号:");
+    printf("   请输入你的学号:");
 	scanf("%d", &num);
 	for(i = 0; i < count; i++, p++)
     {
@@ -60,10 +60,8 @@ void IDfind0()
         SetPosition(MARGIN_X + 25, 9);
         printf("                   ");
         SetPosition(MARGIN_X + 25, 9);
-        printf("    对不起，没有找到该学生信息！               ");
-        SetPosition(MARGIN_X + 35, 10);
-        printf("请按任意键返回...");
-        getch();
+        printf("          没有找到该学生信息               ");
+        Sleep(3000);
 
 	}
 	else
@@ -133,9 +131,11 @@ void IDmenu(char choice)
             SetPosition(MARGIN_X + 27, 8 + i);
             printf("                       ");
         }
-        SetPosition(MARGIN_X + 20, 9);
-        printf("对不起，只能输入1~2之间的数字，请您重新输入！");
-        Sleep(1500);
+        SetPosition(MARGIN_X + 25, 9);
+        printf("对不起，只能输入1~3之间的数字！");
+        SetPosition(MARGIN_X + 32, 10);
+        printf("请按任意键返回...");
+        getch();
     }
 }
 
